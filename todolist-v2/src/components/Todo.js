@@ -1,8 +1,11 @@
 import React from 'react';
 
-function Todo({todo, toogleComplete}){
+function Todo({todo, toogleComplete, removeTodo}){
     function handleCheckbox(){
         toogleComplete(todo.id);
+    }
+    function handleRemoveClick(){
+        removeTodo (todo.id);
     }
 return (
 <div style={{display:"flex"}}>
@@ -10,10 +13,12 @@ return (
 <li
 style ={{
     color: "white",
-    textDecoration: Todo.completed ? "line-through" : null
+    textDecoration: todo.completed ? "line-through" : null
 }}
->{todo.task}</li>
-<button>X</button>
+>
+    {todo.task}
+</li>
+<button onClick={handleRemoveClick}>X</button>
 </div>
 );
 }
