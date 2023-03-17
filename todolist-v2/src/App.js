@@ -43,13 +43,10 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>
-        To do App
-        </p>
-        <TodoForm addTodo={addTodo}/>
-        <TodoList todos={todos}
+      <TodoList className ="todolist" todos={todos}
         toggleComplete={toggleComplete}
         removeTodo={removeTodo}/>
+        <TodoForm className="todoform" addTodo={addTodo}/>
       </header>
     </div>
   );

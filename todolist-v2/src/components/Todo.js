@@ -1,25 +1,30 @@
 import React from 'react';
+import {Checkbox, ListItem, Typography, Button} from '@mui/material';
+import {VscChromeClose} from "react-icons/vsc";
 
 function Todo({todo, toggleComplete, removeTodo}){
-    function handleCheckbox(){
+    function handleCheckboxClick(){
         toggleComplete(todo.id);
     }
     function handleRemoveClick(){
         removeTodo (todo.id);
     }
 return (
-<div style={{display:"flex"}}>
-<input type="checkbox" onClick={handleCheckbox}/>
-<li
+<ListItem style={{display:"flex"}}>
+<Checkbox checked={todo.completed} onClick={handleCheckboxClick}/>
+<Typography varient = "body1"
 style ={{
-    color: "white",
+    color: "#282c34",
+    fontSize: 18,
     textDecoration: todo.completed ? "line-through" : null
 }}
 >
     {todo.task}
-</li>
-<button onClick={handleRemoveClick}>X</button>
-</div>
+</Typography>
+<Button onClick={handleRemoveClick}>
+    <VscChromeClose size={15}/>
+    </Button>
+</ListItem>
 );
 }
 

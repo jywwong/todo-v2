@@ -1,5 +1,7 @@
 import React, {useState} from 'react';
 import {nanoid} from "nanoid";
+import {FiPlusCircle} from "react-icons/fi";
+import {TextField, Button} from '@mui/material';
 
 function TodoForm ({addTodo}) {
 const [todo, setTodo] = useState({
@@ -21,13 +23,22 @@ function handleSubmit (e) {
 
 return (
 <form onSubmit={handleSubmit}>
-<input
+<TextField
 name="task"
+label="What are you up to today?"
 type="text"
+style = {{
+    width: 700,
+}}
 value={todo.task}
 onChange = {handleTaskUpdate}
 />
-<button type="submit">Enter</button>
+<Button
+style = {{
+    height: 60,
+}}type="submit">
+    <FiPlusCircle size={30}/>
+</Button>
 </form>
 );
 }
