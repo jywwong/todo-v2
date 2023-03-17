@@ -1,8 +1,8 @@
 import React from 'react';
 
-function Todo({todo, toogleComplete, removeTodo}){
+function Todo({todo, toggleComplete, removeTodo}){
     function handleCheckbox(){
-        toogleComplete(todo.id);
+        toggleComplete(todo.id);
     }
     function handleRemoveClick(){
         removeTodo (todo.id);

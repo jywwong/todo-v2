@@ -22,7 +22,7 @@ function App() {
     setTodos([todo, ...todos]);
   }
 
-  function toogleComplete (id){
+  function toggleComplete (id){
     setTodos(
       todos.map(todo =>{
       if (todo.id===id){
@@ -48,7 +48,7 @@ function App() {
         </p>
         <TodoForm addTodo={addTodo}/>
         <TodoList todos={todos}
-        toggleComplete={toogleComplete}
+        toggleComplete={toggleComplete}
         removeTodo={removeTodo}/>
       </header>
     </div>
