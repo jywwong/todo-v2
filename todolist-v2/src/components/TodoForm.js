@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import {nanoid} from "nanoid";
 import {FiPlusCircle} from "react-icons/fi";
 import {TextField, Button} from '@mui/material';
+import '../styles/todoform.css';
 
 function TodoForm ({addTodo}) {
 const [todo, setTodo] = useState({
@@ -24,11 +25,12 @@ function handleSubmit (e) {
 return (
 <form onSubmit={handleSubmit}>
 <TextField
+className="todo-textfield"
 name="task"
 label="What are you up to today?"
 type="text"
 style = {{
-    width: 700,
+    width: '70vw',
 }}
 value={todo.task}
 onChange = {handleTaskUpdate}
