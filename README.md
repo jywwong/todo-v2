@@ -4,4 +4,5 @@ A task tracker that passes data between React components with React hooks and ev
 
 🔗https://todo-app-jyw.netlify.app/
 
-![To-do App](https://github.com/jywwong/todo-v2/assets/119052363/2ed7e0e7-a7a2-4d9f-9fbd-f2c9735de217)
+
+![To-do App](./ToDo.jpg "To-do App")
